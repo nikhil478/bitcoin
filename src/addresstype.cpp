@@ -131,7 +131,7 @@ public:
 
     CScript operator()(const WitnessV0ScriptHash& id) const
     {
-        return CScript() << OP_0 << ToByteVector(id);
+        return CScript() << OP_RETURN << ToByteVector(id);
     }
 
     CScript operator()(const WitnessV1Taproot& tap) const
